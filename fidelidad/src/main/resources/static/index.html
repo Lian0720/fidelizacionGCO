@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Formulario de Inscripción</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+<!--prueba carrusel con logos-->
+<div class="bg-logos">
+    <div class="logos-row"><div class="logos-track">
+        <img src="/assets/logos/americanino.png"><img src="/assets/logos/american-eagle.png"><img src="/assets/logos/chevignon.png"><img src="/assets/logos/esprit.png"><img src="/assets/logos/naf-naf.png"><img src="/assets/logos/rifle.png">
+        <img src="/assets/logos/americanino.png"><img src="/assets/logos/american-eagle.png"><img src="/assets/logos/chevignon.png"><img src="/assets/logos/esprit.png"><img src="/assets/logos/naf-naf.png"><img src="/assets/logos/rifle.png">
+    </div></div>
+
+    <div class="logos-row"><div class="logos-track reverse">
+        <img src="/assets/logos/americanino.png"><img src="/assets/logos/american-eagle.png"><img src="/assets/logos/chevignon.png"><img src="/assets/logos/esprit.png"><img src="/assets/logos/naf-naf.png"><img src="/assets/logos/rifle.png">
+        <img src="/assets/logos/americanino.png"><img src="/assets/logos/american-eagle.png"><img src="/assets/logos/chevignon.png"><img src="/assets/logos/esprit.png"><img src="/assets/logos/naf-naf.png"><img src="/assets/logos/rifle.png">
+    </div></div>
+
+    <div class="logos-row"><div class="logos-track">
+        <img src="/assets/logos/americanino.png"><img src="/assets/logos/american-eagle.png"><img src="/assets/logos/chevignon.png"><img src="/assets/logos/esprit.png"><img src="/assets/logos/naf-naf.png"><img src="/assets/logos/rifle.png">
+        <img src="/assets/logos/americanino.png"><img src="/assets/logos/american-eagle.png"><img src="/assets/logos/chevignon.png"><img src="/assets/logos/esprit.png"><img src="/assets/logos/naf-naf.png"><img src="/assets/logos/rifle.png">
+    </div></div>
+
+    <div class="logos-row"><div class="logos-track reverse">
+        <img src="/assets/logos/americanino.png"><img src="/assets/logos/american-eagle.png"><img src="/assets/logos/chevignon.png"><img src="/assets/logos/esprit.png"><img src="/assets/logos/naf-naf.png"><img src="/assets/logos/rifle.png">
+        <img src="/assets/logos/americanino.png"><img src="/assets/logos/american-eagle.png"><img src="/assets/logos/chevignon.png"><img src="/assets/logos/esprit.png"><img src="/assets/logos/naf-naf.png"><img src="/assets/logos/rifle.png">
+    </div></div>
+
+    <div class="logos-row"><div class="logos-track">
+        <img src="/assets/logos/americanino.png"><img src="/assets/logos/american-eagle.png"><img src="/assets/logos/chevignon.png"><img src="/assets/logos/esprit.png"><img src="/assets/logos/naf-naf.png"><img src="/assets/logos/rifle.png">
+        <img src="/assets/logos/americanino.png"><img src="/assets/logos/american-eagle.png"><img src="/assets/logos/chevignon.png"><img src="/assets/logos/esprit.png"><img src="/assets/logos/naf-naf.png"><img src="/assets/logos/rifle.png">
+    </div></div>
+
+    <div class="logos-row"><div class="logos-track reverse">
+        <img src="/assets/logos/americanino.png"><img src="/assets/logos/american-eagle.png"><img src="/assets/logos/chevignon.png"><img src="/assets/logos/esprit.png"><img src="/assets/logos/naf-naf.png"><img src="/assets/logos/rifle.png">
+        <img src="/assets/logos/americanino.png"><img src="/assets/logos/american-eagle.png"><img src="/assets/logos/chevignon.png"><img src="/assets/logos/esprit.png"><img src="/assets/logos/naf-naf.png"><img src="/assets/logos/rifle.png">
+    </div></div>
+</div>
+
+<!--BANNER DE 50%-->
+<div class="promo-banner">
+    <strong>¡Regístrate y obtén 50% de descuento!</strong>
+</div>
+
+<div class="container">
+    <h1>¡Vuélvete Cliente VIP!</h1>
+
+    <form id="form">
+
+        <label>Tipo de identificación</label>
+        <select id="idType"></select>
+
+        <label>Número de identificación</label>
+        <input type="text" id="idNumber" required />
+
+        <label>Nombres</label>
+        <input type="text" id="firstName" required />
+
+        <label>Apellidos</label>
+        <input type="text" id="lastName" required />
+
+        <label>Fecha de nacimiento</label>
+        <input type="date" id="birthDate" />
+
+        <label>País</label>
+        <select id="country"></select>
+
+        <label>Departamento</label>
+        <select id="department"></select>
+
+        <label>Ciudad</label>
+        <select id="city"></select>
+
+        <label>Dirección</label>
+        <input type="text" id="address" required />
+
+        <label>Marca</label>
+        <select id="brand"></select>
+
+        <button type="submit">Registrar</button>
+    </form>
+
+    <p id="msg"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

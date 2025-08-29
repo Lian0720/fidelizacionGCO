@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#msg {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: green;
+}
+
+.promo-banner {
+  position: relative;
+  z-index: 1;         /* por encima del fondo animado */
+  margin: 16px auto;
+  max-width: 720px;   /* ajusta al ancho del formulario */
+  background: #fffae6;
+  color: #8a5a00;
+  border: 1px solid #ffe08a;
+  border-radius: 8px;
+  padding: 10px 14px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+}
+
+
+/*  PRUEBA CSS LOGOS Capa de fondo con logos deslizándose */
+/* Fondo con varias filas de logos */
+.bg-logos {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.08;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* distribuye filas uniformemente */
+}
+
+.logos-row {
+  width: 200%;
+}
+
+.logos-track {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  animation: scrollx 30s linear infinite;
+}
+
+.logos-track.reverse {
+  animation-direction: reverse;
+}
+
+.bg-logos img {
+  height: 48px;
+  filter: grayscale(100%) contrast(120%);
+  opacity: 0.9;
+}
+
+@keyframes scrollx {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+
+

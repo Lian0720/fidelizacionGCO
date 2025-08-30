@@ -5,7 +5,7 @@ public class CustomerRequest {
     private String idNumber;
     private String firstName;
     private String lastName;
-    private String birthDate; // yyyy-MM-dd
+    private String birthDate;
     private String address;
     private Long cityId;
     private Long brandId;

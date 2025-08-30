@@ -32,7 +32,7 @@ public class CustomerController {
         this.brandRepo = brandRepo;
     }
 
-    @PostMapping // sin 'consumes/produces' para hacerlo flexible
+    @PostMapping
     public ResponseEntity<?> create(@RequestBody CustomerRequest req) {
         try {
             Customer c = new Customer();
@@ -42,7 +42,7 @@ public class CustomerController {
             c.setLastName(req.getLastName());
 
             if (req.getBirthDate() != null && !req.getBirthDate().isBlank()) {
-                c.setBirthDate(LocalDate.parse(req.getBirthDate())); // yyyy-MM-dd
+                c.setBirthDate(LocalDate.parse(req.getBirthDate()));
             }
 
             c.setAddress(req.getAddress());
@@ -53,7 +53,6 @@ public class CustomerController {
             return ResponseEntity.ok(Map.of("id", saved.getId()));
 
         } catch (Exception e) {
-            // Respuesta simple y clara para depurar desde el frontend
             return ResponseEntity.badRequest().body(Map.of("error", "Error guardando cliente: " + e.getMessage()));
         }
     }

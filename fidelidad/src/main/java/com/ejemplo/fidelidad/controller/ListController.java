@@ -25,7 +25,6 @@ public class ListController {
         this.deptRepo = deptRepo;
         this.cityRepo = cityRepo;
     }
-
     @GetMapping("/id-types")
     public List<IdType> idTypes() { return idTypeRepo.findAll(); }
 

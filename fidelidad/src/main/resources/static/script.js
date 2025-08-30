@@ -25,7 +25,6 @@ window.onload = async () => {
     }
   });
 
-//SWWETALERT
 document.getElementById('form').addEventListener('submit', async e => {
   e.preventDefault();
 
@@ -49,7 +48,7 @@ document.getElementById('form').addEventListener('submit', async e => {
 
     const text = await res.text();
     let data = {};
-    try { data = JSON.parse(text); } catch { /* puede venir texto plano */ }
+    try { data = JSON.parse(text); } catch { }
 
     if (res.ok) {
       await Swal.fire({
@@ -60,13 +59,10 @@ document.getElementById('form').addEventListener('submit', async e => {
         confirmButtonText: 'Aceptar'
       });
 
-      // reset del formulario y selects dependientes
       e.target.reset();
-      // Limpia selects dependientes por si quedaron valores
       document.getElementById('department').innerHTML = '<option value="">-- Seleccione depto --</option>';
       document.getElementById('city').innerHTML = '<option value="">-- Seleccione ciudad --</option>';
 
-      // si usas fondo por marca, al reset quítalo:
       const brandSelect = document.getElementById('brand');
       if (brandSelect) {
         const brandName = '';
@@ -93,7 +89,7 @@ document.getElementById('form').addEventListener('submit', async e => {
 });
 
 };
-//SWEETALERT 50% OFF
+
 function shouldShowPromo(days=7) {
   const key = 'promo_shown_at';
   const last = localStorage.getItem(key);
@@ -104,7 +100,7 @@ function shouldShowPromo(days=7) {
 }
 
 async function showWelcomePromo() {
-  // Puedes cambiar imagen, título y texto a tu gusto
+
   await Swal.fire({
     title: '¡Bienvenido!',
     html: '<b>Regístrate y obtén 50% de descuento</b><br/>Solo por tiempo limitado.',
@@ -122,15 +118,13 @@ document.addEventListener('DOMContentLoaded', () => {
   showWelcomePromo();
 });
 
-    // PRUEBA CAMBIAR FONDO AL SELECCIONAR MARCA
 const brandBgMap = {
-
   'Americanino': '/assets/brands/americanino_bg.jpg',
-  'American Eagle': '/assets/brands/american_eagle_bg.jpg',
+  'American Eagle': '/assets/brands/americanEagle_bg.jpg',
   'Chevignon': '/assets/brands/chevignon_bg.jpg',
   'Esprit': '/assets/brands/esprit_bg.jpg',
-  'Naf Naf': '/assets/brands/naf_naf_bg.jpeg',
-  'Rifle': '/assets/brands/rifle_bg.jpeg'
+  'Naf Naf': '/assets/brands/naf-naf_bg.jpg',
+  'Rifle': '/assets/brands/rifle_bg.jpg'
 };
 
 function setBrandBackground(brandName) {

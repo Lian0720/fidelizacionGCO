@@ -8,3 +8,7 @@ Permite registrar clientes en un programa de fidelidad para las marcas: American
 - Maven
 - MySQL 8.x
 
+##COMANDO PARA VISUALIZAR CLIENTES INSCRITOS EN MySQL:
+
+USE fidelidad;
+SELECT * FROM vista_clientes ORDER BY id DESC;
